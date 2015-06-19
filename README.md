@@ -3,7 +3,7 @@ node-motion
 
 This repository contains node-motion, which will eventually become a standalone client.
 
-It is a simple wrapper for the motion package that can be used on Linux boxes to view a usb connected webcam. It will spawn motion and a simple express server to view the cam. It uses a JSON file in `config/` to create a temporary `motion.conf` file. Values can be overridden in the config.
+It is a simple wrapper for the [motion](http://www.lavrsen.dk/foswiki/bin/view/Motion) package that can be used on Linux boxes to view a usb connected webcam. It will spawn motion and a simple express server to view the cam. It uses a JSON file in `config/` to create a temporary `motion.conf` file. Values can be overridden in the config.
 
 See `index.js` for a simple use. This package is not yet published on the npm registry, because the cli is not ready yet.
 
@@ -23,7 +23,7 @@ Prerequisites
 
 TODO
 --------------
-* Add grunt/gulp
+* ~~Add grunt/gulp~~
 * Writing tests
 * Splitting different modules in seperate npm-packages
 * Setting up the client

@@ -15,7 +15,6 @@ var Config = function(config) {
   if (typeof config === 'object') {
     if (config.version) {
       var fileName = 'motion_conf_' + config.version + '.json';
-      //var configFile = __dirname + '/motion_conf_' + config.version + '.json';
       var configFile = path.resolve(__dirname, fileName);
       if (!shell.test('-e', configFile)) {
         shell.echo('Sorry, configuration for version ' + config.version + ' cannot be found');
