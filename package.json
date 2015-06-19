@@ -17,10 +17,15 @@
     "node": "0.12.x"
   },
   "private": "true",
-  "os": [ "!win32" ],
+  "os": [
+    "!win32"
+  ],
   "license": "MIT",
   "devDependencies": {
-
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^0.14.0",
+    "gulp-watch": "^4.2.4",
+    "jshint-stylish": "^2.0.0"
   },
   "repository": {
     "type": "git",

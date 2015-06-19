@@ -1,0 +1,10 @@
+{
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "quotes": [1, 'single'],
+        "indent": [2, 2],
+        "no-process-exit": [0]
+    }
+}
