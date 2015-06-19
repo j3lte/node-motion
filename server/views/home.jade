@@ -1,0 +1,15 @@
+html
+  head
+    title=title
+    link(href='/components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+  body
+    div.container
+      div.jumbotron
+        div.row.text-center
+          h2 Node Motion stream
+        if streamPort
+          div.row.text-center
+            img.center(src="http://localhost:" + streamPort + "/stream.mjpg")
+        else
+          div.row.text-center
+            p.center Streaming not enabled, check console

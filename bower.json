@@ -1,0 +1,12 @@
+{
+  "name": "node-motion",
+  "version": "0.0.1",
+  "homepage": "https://github.com/j3lte/node-motion",
+  "authors": [
+    "Jelte Lagendijk <jwlagendijk@gmail.com> "
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

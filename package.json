@@ -1,0 +1,37 @@
+{
+  "name": "node-motion",
+  "version": "0.0.1",
+  "description": "starts motion",
+  "main": "index.js",
+  "bin": {
+    "node-motion": "./bin/node-motion"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node node_modules/bower/bin/bower install"
+  },
+  "author": [
+    "j3lte <jwlagendijk@gmail.com>"
+  ],
+  "engines": {
+    "node": "0.12.x"
+  },
+  "private": "true",
+  "os": [ "!win32" ],
+  "license": "MIT",
+  "devDependencies": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j3lte/node-motion.git"
+  },
+  "dependencies": {
+    "bower": "^1.4.1",
+    "express": "^4.12.4",
+    "jade": "^1.11.0",
+    "lodash": "^3.9.3",
+    "shelljs": "^0.5.1",
+    "tmp": "0.0.26"
+  }
+}
