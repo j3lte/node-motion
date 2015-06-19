@@ -23,6 +23,7 @@ Prerequisites
 
 TODO
 --------------
+* Add grunt/gulp
 * Writing tests
 * Splitting different modules in seperate npm-packages
 * Setting up the client
