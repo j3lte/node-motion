@@ -1,8 +1,8 @@
 {
   "name": "node-motion",
-  "version": "0.0.1",
-  "description": "starts motion",
-  "main": "index.js",
+  "version": "0.0.9",
+  "description": "NodeJS Client wrapper for motion package in Linux",
+  "main": "cli.js",
   "bin": {
     "node-motion": "./bin/node-motion"
   },
@@ -16,16 +16,16 @@
   "engines": {
     "node": "0.12.x"
   },
-  "private": "true",
   "os": [
-    "!win32"
+    "linux"
   ],
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
     "gulp-eslint": "^0.14.0",
-    "gulp-watch": "^4.2.4",
-    "jshint-stylish": "^2.0.0"
+    "gulp-shell": "^0.4.2",
+    "gulp-watch": "^4.2.4"
   },
   "repository": {
     "type": "git",
@@ -33,10 +33,13 @@
   },
   "dependencies": {
     "bower": "^1.4.1",
+    "chalk": "^1.0.0",
     "express": "^4.12.4",
     "jade": "^1.11.0",
     "lodash": "^3.9.3",
+    "optimist": "^0.6.1",
     "shelljs": "^0.5.1",
-    "tmp": "0.0.26"
+    "tmp": "0.0.26",
+    "update-notifier": "^0.5.0"
   }
 }

@@ -5,6 +5,7 @@
     "rules": {
         "quotes": [1, 'single'],
         "indent": [2, 2],
-        "no-process-exit": [0]
+        "no-process-exit": [0],
+        "no-unused-expressions": [0]
     }
 }

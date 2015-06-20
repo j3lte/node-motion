@@ -1,4 +1,11 @@
 'use strict';
+/*
+ * node-motion
+ * https://github.com/j3lte/node-motion
+ *
+ * Copyright (c) 2015 Jelte Lagendijk
+ * Licensed under the MIT license.
+ */
 var spawn = require('child_process').spawn;
 var _ = require('lodash');
 
@@ -14,7 +21,7 @@ var supportedVersions = [
 var Motion = function(path) {
 
   if (path && !shell.test('-e', path)) {
-    shell.echo('Sorry, this module cannot find motion on ' + path);
+    shell.echo('Sorry, this module cannot find motion on given path: ' + path);
     process.exit(1);
   } else if (!shell.which('motion')) {
     shell.echo('Sorry, this module requires Motion to be installed');
@@ -25,7 +32,7 @@ var Motion = function(path) {
   this.version = this.getVersion();
 
   if (!_.includes(supportedVersions, this.version)) {
-    shell.echo('Sorry, motion Version ' + this.version + ' is not supported');
+    shell.echo('Sorry, motion version ' + this.version + ' is not supported');
     process.exit(1);
   }
 
@@ -48,7 +55,7 @@ Motion.prototype.getVersion = function(){
   var versionRegEx = /^motion Version ([\d\.\+]+), .*$/;
   var version = shell.exec(helpCmd, {silent: true}).output.replace(/\n/, '');
   if (version === '') {
-    shell.echo('Sorry, cannot determine Motion version');
+    shell.echo('Sorry, cannot determine Motion version for given Motion binary on : ' + this.motionBin);
     process.exit(1);
   } else {
     var res = versionRegEx.exec(version);

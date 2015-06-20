@@ -1,0 +1,14 @@
+.git*
+docs/
+test.js
+testing.js
+.travis.yml
+.DS_Store
+coverage.html
+lib-cov
+
+temp/
+src/
+.eslintrc
+Gulpfile.js
+

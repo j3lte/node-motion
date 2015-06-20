@@ -1,32 +1,46 @@
 node-motion
 =================
 
-This repository contains node-motion, which will eventually become a standalone client.
+[![NPM](https://nodei.co/npm/node-motion.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-motion/)
 
-It is a simple wrapper for the [motion](http://www.lavrsen.dk/foswiki/bin/view/Motion) package that can be used on Linux boxes to view a usb connected webcam. It will spawn motion and a simple express server to view the cam. It uses a JSON file in `config/` to create a temporary `motion.conf` file. Values can be overridden in the config.
+[![DAVID](https://david-dm.org/j3lte/node-motion.png)](https://david-dm.org/j3lte/node-motion)
+[![npm version](https://badge.fury.io/js/node-motion.svg)](http://badge.fury.io/js/node-motion)
+[![Development Dependency Status](https://david-dm.org/j3lte/node-motion/dev-status.svg?theme=shields.io)](https://david-dm.org/j3lte/node-motion#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/j3lte/node-motion/badges/gpa.svg)](https://codeclimate.com/github/j3lte/node-motion)
 
-See `index.js` for a simple use. This package is not yet published on the npm registry, because the cli is not ready yet.
+NodeJS terminal client for managing Motion
 
-Install
--------------
+It is a simple wrapper for the [motion](http://www.lavrsen.dk/foswiki/bin/view/Motion) package that can be used on Linux boxes to view a usb connected webcam. It will spawn motion and a simple express server to view the cam.
 
-* clone the repository
-* ```npm install```
-* run ```node cli.js```
-* open `localhost:3000` to view your webcam
+  * It can use a JSON file that represents a .conf file ([see configs](https://github.com/j3lte/node-motion/tree/master/config))
+  * It can use a valid motion.conf file (see [example](http://www.lavrsen.dk/foswiki/bin/view/Motion/WorkingConfigs))
+  * It uses a JSON file in `config/` ([see configs](https://github.com/j3lte/node-motion/tree/master/config)) to create a temporary `motion.conf` file. Values can be overridden with the client
+
+## Usage
+
+Install Node.js if you don't have it yet. Then from the command line:
+
+    [sudo] npm install node-motion -g
+
+Then proceed as follows:
+
+    node-motion [options] [configfile]
 
 Prerequisites
 --------------
 
-* Only works on Linux (tested and developed on Ubuntu)
+* Only works on Linux (tested and developed on Ubuntu 14.04, Rapsberry Pi is next!)
 * Needs the motion package, currently only works on version 3.2.12 (others are developed)
 
 TODO
 --------------
 * ~~Add grunt/gulp~~
 * Writing tests
-* Splitting different modules in seperate npm-packages
-* Setting up the client
+* ~~Setting up the client~~
+
+## Bugs / issues / features
+
+Please, if you find any bugs, or are a way better developer than I am (as in, you are thinking 'spaghetti' when looking at my code), feel free to create an issue. If you have features or addons for compatibility, please add a (pull request)[https://github.com/j3lte/node-motion/pulls]!
 
 ## [License](https://github.com/j3lte/node-motion/blob/master/LICENSE)
 

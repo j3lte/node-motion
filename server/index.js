@@ -1,4 +1,11 @@
 'use strict';
+/*
+ * node-motion
+ * https://github.com/j3lte/node-motion
+ *
+ * Copyright (c) 2015 Jelte Lagendijk
+ * Licensed under the MIT license.
+ */
 var express = require('express');
 var path = require('path');
 var app = express();

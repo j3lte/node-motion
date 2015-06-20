@@ -1,4 +1,11 @@
 'use strict';
+/*
+ * node-motion
+ * https://github.com/j3lte/node-motion
+ *
+ * Copyright (c) 2015 Jelte Lagendijk
+ * Licensed under the MIT license.
+ */
 var fs = require('fs');
 var _ = require('lodash');
 var path = require('path');
@@ -27,6 +34,9 @@ var Config = function(config) {
     if (config.params && typeof config.params === 'object') {
       this.config = _.assign(defaultConfig, config.params);
     }
+  } else if (typeof config === 'string') {
+    // assuming the given string is a valid json file, currently only used in ../cli.js
+    this.config = require(config);
   } else {
     this.config = defaultConfig;
   }
