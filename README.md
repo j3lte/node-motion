@@ -29,8 +29,10 @@ Then proceed as follows:
 Prerequisites
 --------------
 
-* Only works on Linux (tested and developed on Ubuntu 14.04, Raspberry Pi is next!)
-* Needs the motion package, currently only works on version 3.2.12 (others are developed)
+* Only works on Linux (tested and developed on Ubuntu 14.04 & Raspberry Pi)
+* Needs the motion package installed (`sudo apt-get install motion`), currently works on:
+    * version Motion 3.2.12
+    * version Motion 3.2.12+git20140228
 
 TODO
 --------------
