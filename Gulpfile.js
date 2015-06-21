@@ -9,11 +9,11 @@
 var gulp = require('gulp');
 var eslint = require('gulp-eslint');
 var shell = require('gulp-shell');
-var clean = require('gulp-clean');
+var del = require('del');
 
 var commands = {
   docs: [
-    'echo "## Output chanarchive\n" > ./docs/cli.md;',
+    'echo "## Output node-motion\n" > ./docs/cli.md;',
     'echo "\\\`\\\`\\\`" >> ./docs/cli.md;',
     'node ./cli.js -h >> ./docs/cli.md;',
     'echo "\\\`\\\`\\\`" >> ./docs/cli.md;'
@@ -31,9 +31,10 @@ var srcFiles = [
   './server/*.js'
 ];
 
-gulp.task('clean', function () {
-  return gulp.src('npm-shrinkwrap.json', {read: false})
-    .pipe(clean());
+gulp.task('clean', function (cb) {
+  del([
+    'npm-shrinkwrap.json'
+  ], cb);
 });
 
 gulp.task('lint', function() {

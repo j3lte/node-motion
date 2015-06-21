@@ -13,8 +13,8 @@ NodeJS terminal client for managing Motion
 It is a simple wrapper for the [motion](http://www.lavrsen.dk/foswiki/bin/view/Motion) package that can be used on Linux boxes to view a usb connected webcam. It will spawn motion and a simple express server to view the cam.
 
   * It can use a JSON file that represents a .conf file ([see configs](https://github.com/j3lte/node-motion/tree/master/config))
-  * It can use a valid motion.conf file (see [example](http://www.lavrsen.dk/foswiki/bin/view/Motion/WorkingConfigs))
-  * It uses a JSON file in `config/` ([see configs](https://github.com/j3lte/node-motion/tree/master/config)) to create a temporary `motion.conf` file. Values can be overridden with the client
+  * It can use a valid motion.conf file (see [examples](http://www.lavrsen.dk/foswiki/bin/view/Motion/WorkingConfigs))
+  * It uses a JSON file in `config/` ([see example config](https://github.com/j3lte/node-motion/blob/master/config/motion_conf.json)) to create a temporary `motion.conf` file. Values can be overridden with the client
 
 ## Usage
 
@@ -29,7 +29,7 @@ Then proceed as follows:
 Prerequisites
 --------------
 
-* Only works on Linux (tested and developed on Ubuntu 14.04, Rapsberry Pi is next!)
+* Only works on Linux (tested and developed on Ubuntu 14.04, Raspberry Pi is next!)
 * Needs the motion package, currently only works on version 3.2.12 (others are developed)
 
 TODO
