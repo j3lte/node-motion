@@ -1,6 +1,6 @@
 {
   "name": "node-motion",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NodeJS Client wrapper for motion package in Linux",
   "main": "cli.js",
   "bin": {
@@ -12,6 +12,13 @@
   },
   "author": [
     "j3lte <jwlagendijk@gmail.com>"
+  ],
+  "keywords": [
+    "motion",
+    "webcam",
+    "linux",
+    "utility",
+    "command line"
   ],
   "engines": {
     "node": ">=0.10.28 <=0.12.x"
