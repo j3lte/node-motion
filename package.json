@@ -14,7 +14,7 @@
     "j3lte <jwlagendijk@gmail.com>"
   ],
   "engines": {
-    "node": "0.12.x"
+    "node": ">=0.10.28 <=0.12.x"
   },
   "os": [
     "linux"
