@@ -26,13 +26,15 @@ Then proceed as follows:
 
     node-motion [options] [configfile]
 
+See [client output](https://github.com/j3lte/node-motion/blob/master/docs/cli.md)
+
 Prerequisites
 --------------
 
 * Only works on Linux (tested and developed on Ubuntu 14.04 & Raspberry Pi)
 * Needs the motion package installed (`sudo apt-get install motion`), currently works on:
-    * version Motion 3.2.12
-    * version Motion 3.2.12+git20140228
+    * Motion version 3.2.12
+    * Motion version 3.2.12+git20140228
 
 TODO
 --------------
