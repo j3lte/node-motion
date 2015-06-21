@@ -38,7 +38,7 @@ Prerequisites
 
 ## Bugs / issues / features
 
-Please, if you find any bugs, or are a way better developer than I am (as in, you are thinking 'spaghetti' when looking at my code), feel free to create an issue. If you have features or addons for compatibility, please add a (pull request)[https://github.com/j3lte/node-motion/pulls]!
+Please, if you find any bugs, or are a way better developer than I am (as in, you are thinking 'spaghetti' when looking at my code), feel free to create an issue. If you have features or addons for compatibility, please add a [pull request](https://github.com/j3lte/node-motion/pulls)!
 
 ## [License](https://github.com/j3lte/node-motion/blob/master/LICENSE)
 
