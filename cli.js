@@ -84,7 +84,7 @@ function runMotion(motionConfFile) {
 
   if (motionConfFile && motionConfFile.type === '.json') {
     console.log('[NODE-MOTION] Using json: ' + motionConfFile.file);
-    motionConfFile = new MotionConfig(motionConfFile.file);
+    config = new MotionConfig(motionConfFile.file);
   } else if (motionConfFile && motionConfFile.type === '.conf') {
     console.log('[NODE-MOTION] Using conf : ' + motionConfFile.file);
     useJSON = false;
@@ -92,7 +92,9 @@ function runMotion(motionConfFile) {
     console.log('[NODE-MOTION] Generating temporary config file');
     var motionParams = {
       'control_port': argv.control_port, // This is used for controlling Motion
-      'webcam_port': argv.webcam_port // This is used for the stream
+      'webcontrol_port': argv.control_port, // version 3_2_12_git20140228
+      'webcam_port': argv.webcam_port, // This is used for the stream
+      'stream_port': argv.webcam_port // version 3_2_12_git20140228
     };
     if (argv.videodevice) {
       motionParams.videodevice = argv.videodevice;

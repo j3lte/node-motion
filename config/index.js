@@ -32,7 +32,7 @@ var Config = function(config) {
       }
     }
     if (config.params && typeof config.params === 'object') {
-      this.config = _.assign(defaultConfig, config.params);
+      this.config = _.assign(this.config, config.params);
     }
   } else if (typeof config === 'string') {
     // assuming the given string is a valid json file, currently only used in ../cli.js

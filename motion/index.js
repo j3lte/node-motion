@@ -15,7 +15,8 @@ var Emitter = require('events').EventEmitter;
 var util = require('util');
 
 var supportedVersions = [
-  '3_2_12'
+  '3_2_12',
+  '3_2_12_git20140228'
 ];
 
 var Motion = function(path) {
@@ -44,7 +45,9 @@ var Motion = function(path) {
 
   this.messageArray = [
     {version: '3_2_12', regex: /^motion-httpd: waiting for data on port TCP (\d+)/, action: 'backend'},
-    {version: '3_2_12', regex: /^Started stream webcam server in port (\d+)/, action: 'stream'}
+    {version: '3_2_12', regex: /^Started stream webcam server in port (\d+)/, action: 'stream'},
+    {version: '3_2_12_git20140228', regex: /httpd_run: motion-httpd: waiting for data on (localhost|\d\.\d\.\d\.\d) port TCP (\d+)/, match: 2, action: 'backend'},
+    {version: '3_2_12_git20140228', regex: /motion_init: Started motion-stream server in port (\d+).*$/, action: 'stream'}
   ];
 };
 
@@ -52,7 +55,7 @@ util.inherits(Motion, Emitter);
 
 Motion.prototype.getVersion = function(){
   var helpCmd = this.motionBin + ' -h | head -n 1';
-  var versionRegEx = /^motion Version ([\d\.\+]+), .*$/;
+  var versionRegEx = /^motion Version ([\d\.\+a-z]+), .*$/;
   var version = shell.exec(helpCmd, {silent: true}).output.replace(/\n/, '');
   if (version === '') {
     shell.echo('Sorry, cannot determine Motion version for given Motion binary on : ' + this.motionBin);
@@ -62,7 +65,7 @@ Motion.prototype.getVersion = function(){
     if (res) {
       return res[1].replace(/\./g, '_').replace(/\+/g, '_');
     } else {
-      shell.echo('Sorry, cannot determine Motion version');
+      shell.echo('Sorry, cannot determine Motion version, or version is not supported');
       process.exit(1);
     }
   }
@@ -132,7 +135,8 @@ Motion.prototype.checkMessages = function(msg) {
       var res = message.regex.exec(msg);
       if (res) {
         matched = message.action;
-        payload = res[1];
+        var match = message.match || 1;
+        payload = res[match];
       }
     }
   });
