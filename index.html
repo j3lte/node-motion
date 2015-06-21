@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Node-motion by j3lte</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Node-motion</h1>
+        <p>Client to use motion in NodeJS</p>
+
+        <p class="view"><a href="https://github.com/j3lte/node-motion">View the Project on GitHub <small>j3lte/node-motion</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/j3lte/node-motion/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/j3lte/node-motion/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/j3lte/node-motion">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="node-motion" class="anchor" href="#node-motion" aria-hidden="true"><span class="octicon octicon-link"></span></a>node-motion</h1>
+
+<p><a href="https://nodei.co/npm/node-motion/"><img src="https://nodei.co/npm/node-motion.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a></p>
+
+<p><a href="https://david-dm.org/j3lte/node-motion"><img src="https://david-dm.org/j3lte/node-motion.png" alt="DAVID"></a>
+<a href="http://badge.fury.io/js/node-motion"><img src="https://badge.fury.io/js/node-motion.svg" alt="npm version"></a>
+<a href="https://david-dm.org/j3lte/node-motion#info=devDependencies"><img src="https://david-dm.org/j3lte/node-motion/dev-status.svg?theme=shields.io" alt="Development Dependency Status"></a>
+<a href="https://codeclimate.com/github/j3lte/node-motion"><img src="https://codeclimate.com/github/j3lte/node-motion/badges/gpa.svg" alt="Code Climate"></a></p>
+
+<p>NodeJS terminal client for managing Motion</p>
+
+<p>It is a simple wrapper for the <a href="http://www.lavrsen.dk/foswiki/bin/view/Motion">motion</a> package that can be used on Linux boxes to view a usb connected webcam. It will spawn motion and a simple express server to view the cam.</p>
+
+<ul>
+<li>It can use a JSON file that represents a .conf file (<a href="https://github.com/j3lte/node-motion/tree/master/config">see configs</a>)</li>
+<li>It can use a valid motion.conf file (see <a href="http://www.lavrsen.dk/foswiki/bin/view/Motion/WorkingConfigs">examples</a>)</li>
+<li>It uses a JSON file in <code>config/</code> (<a href="https://github.com/j3lte/node-motion/blob/master/config/motion_conf.json">see example config</a>) to create a temporary <code>motion.conf</code> file. Values can be overridden with the client</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Install Node.js if you don't have it yet. Then from the command line:</p>
+
+<pre><code>[sudo] npm install node-motion -g
+</code></pre>
+
+<p>Then proceed as follows:</p>
+
+<pre><code>node-motion [options] [configfile]
+</code></pre>
+
+<p>See <a href="https://github.com/j3lte/node-motion/blob/master/docs/cli.md">client output</a></p>
+
+<h2>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h2>
+
+<ul>
+<li>Only works on Linux (tested and developed on Ubuntu 14.04 &amp; Raspberry Pi)</li>
+<li>Needs the motion package installed (<code>sudo apt-get install motion</code>), currently works on:
+
+<ul>
+<li>Motion version 3.2.12</li>
+<li>Motion version 3.2.12+git20140228</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="bugs--issues--features" class="anchor" href="#bugs--issues--features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bugs / issues / features</h2>
+
+<p>Please, if you find any bugs, or are a way better developer than I am (as in, you are thinking 'spaghetti' when looking at my code), feel free to create an issue. If you have features or addons for compatibility, please add a <a href="https://github.com/j3lte/node-motion/pulls">pull request</a>!</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/j3lte/node-motion/blob/master/LICENSE">License</a>
+</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2015 Jelte Lagendijk <a href="mailto:jwlagendijk@gmail.com">jwlagendijk@gmail.com</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/j3lte">j3lte</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
