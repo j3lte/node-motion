@@ -36,12 +36,6 @@ Prerequisites
     * Motion version 3.2.12
     * Motion version 3.2.12+git20140228
 
-TODO
---------------
-* ~~Add grunt/gulp~~
-* Writing tests
-* ~~Setting up the client~~
-
 ## Bugs / issues / features
 
 Please, if you find any bugs, or are a way better developer than I am (as in, you are thinking 'spaghetti' when looking at my code), feel free to create an issue. If you have features or addons for compatibility, please add a (pull request)[https://github.com/j3lte/node-motion/pulls]!
