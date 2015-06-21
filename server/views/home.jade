@@ -9,7 +9,9 @@ html
           h2 Node Motion stream
         if streamPort
           div.row.text-center
-            img.center(src="http://localhost:" + streamPort + "/stream.mjpg")
+            img.center.stream(src="",data-port=streamPort)
         else
           div.row.text-center
             p.center Streaming not enabled, check console
+    script(src='/components/jquery/dist/jquery.js')
+    script(src='/main.js')
