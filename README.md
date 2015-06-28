@@ -1,9 +1,9 @@
 node-motion
 =================
 
-[![NPM](https://nodei.co/npm/node-motion.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-motion/)
+[![NPM](https://nodei.co/npm/node-motion.svg?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-motion/)
 
-[![DAVID](https://david-dm.org/j3lte/node-motion.png)](https://david-dm.org/j3lte/node-motion)
+[![DAVID](https://david-dm.org/j3lte/node-motion.svg)](https://david-dm.org/j3lte/node-motion)
 [![npm version](https://badge.fury.io/js/node-motion.svg)](http://badge.fury.io/js/node-motion)
 [![Development Dependency Status](https://david-dm.org/j3lte/node-motion/dev-status.svg?theme=shields.io)](https://david-dm.org/j3lte/node-motion#info=devDependencies)
 [![Code Climate](https://codeclimate.com/github/j3lte/node-motion/badges/gpa.svg)](https://codeclimate.com/github/j3lte/node-motion)
