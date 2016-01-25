@@ -17,6 +17,7 @@ var util = require('util');
 var defaultConfig = require(path.resolve(__dirname, 'motion_conf.json'));
 
 var Config = function(config) {
+  this.config = {};
   this.tmpFile = tmp.fileSync({ mode: '0644', prefix: 'motion-conf-', postfix: '.conf', keep: true});
   this.tmpFileName = this.tmpFile.name;
   if (typeof config === 'object') {
