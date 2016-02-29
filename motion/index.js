@@ -141,18 +141,18 @@ Motion.prototype.checkMessages = function(msg) {
     }
   });
   switch(matched) {
-    case false:
-      break;
-    case 'backend':
-      that.httpBackendStarted = payload;
-      that.emit('msg', { action: matched, value: payload });
-      break;
-    case 'stream':
-      that.streamStarted = payload;
-      that.emit('msg', { action: matched, value: payload });
-      break;
-    default:
-      break;
+  case false:
+    break;
+  case 'backend':
+    that.httpBackendStarted = payload;
+    that.emit('msg', { action: matched, value: payload });
+    break;
+  case 'stream':
+    that.streamStarted = payload;
+    that.emit('msg', { action: matched, value: payload });
+    break;
+  default:
+    break;
   }
 };
 
