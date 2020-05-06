@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node node_modules/bower/bin/bower install"
+    "postinstall": "node node_modules/bower/bin/bower install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": [
     "j3lte <jwlagendijk@gmail.com>"
@@ -48,6 +50,8 @@
     "optimist": "^0.6.1",
     "shelljs": "^0.6.0",
     "tmp": "0.0.26",
-    "update-notifier": "^0.6.1"
-  }
+    "update-notifier": "^0.6.1",
+    "snyk": "^1.319.0"
+  },
+  "snyk": true
 }
